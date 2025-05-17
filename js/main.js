@@ -109,4 +109,72 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // FAQ Toggle Functionality
+  const faqToggles = document.querySelectorAll(".faq-toggle");
+  if (faqToggles.length > 0) {
+    faqToggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const faqItem = toggle.closest("div");
+        const content = faqItem.querySelector(".faq-content");
+        const icon = toggle.querySelector("i");
+
+        // Toggle the active state
+        content.classList.toggle("hidden");
+        content.classList.toggle("open");
+
+        // Rotate the icon
+        if (icon) {
+          if (content.classList.contains("open")) {
+            icon.style.transform = "rotate(180deg)";
+          } else {
+            icon.style.transform = "rotate(0)";
+          }
+        }
+      });
+    });
+  }
+
+  // Process Steps Interactive Effects
+  const processSteps = document.querySelectorAll(".process-step");
+
+  if (processSteps.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            entry.target.style.opacity = "1";
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    processSteps.forEach((step, index) => {
+      // Add slight staggered delay for hover effect
+      step.addEventListener("mouseenter", () => {
+        const icon = step.querySelector(".process-icon");
+        if (icon) {
+          icon.style.transform = "scale(1.1) translateY(-5px)";
+          icon.style.boxShadow = "0 15px 25px -5px rgba(255, 0, 0, 0.4)";
+        }
+      });
+
+      step.addEventListener("mouseleave", () => {
+        const icon = step.querySelector(".process-icon");
+        if (icon) {
+          icon.style.transform = "";
+          icon.style.boxShadow = "";
+        }
+      });
+
+      // Set initial opacity
+      step.style.opacity = "0.4";
+      step.style.transition = "opacity 0.5s ease, transform 0.3s ease";
+
+      // Add to the observer
+      observer.observe(step);
+    });
+  }
 });

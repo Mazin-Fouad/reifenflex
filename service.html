@@ -96,7 +96,7 @@
 
       <!-- Content -->
       <div class="container mx-auto px-4 relative z-10" data-aos="fade-up">
-        <div class="max-w-3xl">
+        <div class="max-w-3xl pb-10">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">
             Unser <span class="text-primary">Service</span>
           </h1>
@@ -339,72 +339,113 @@
     </section>
 
     <!-- How It Works -->
-    <section class="py-16 bg-secondary">
+    <section class="py-16 bg-secondary relative overflow-hidden">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">
             So <span class="text-primary">funktioniert</span> es
           </h2>
-          <p class="max-w-2xl mx-auto">
+          <p class="max-w-2xl mx-auto text-lg">
             In nur wenigen einfachen Schritten zu Ihrem mobilen Reifenservice.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Subtle background elements -->
+        <div
+          class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute -left-20 -bottom-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"
+        ></div>
+
+        <!-- Process Steps with Connector Lines (only visible on desktop) -->
+        <div class="process-steps-container hidden md:block">
+          <div class="process-connector"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
           <!-- Step 1 -->
-          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
-            >
-              1
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step-content">
+              <div class="process-icon">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="process-number">1</div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-semibold mb-3 text-primary">
+                  Termin vereinbaren
+                </h3>
+                <p class="text-gray-300">
+                  Kontaktieren Sie uns per Telefon, E-Mail oder über unser
+                  Kontaktformular für einen bequemen Termin nach Ihren Wünschen.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Termin vereinbaren</h3>
-            <p class="text-gray-400">
-              Kontaktieren Sie uns per Telefon, E-Mail oder über unser
-              Kontaktformular.
-            </p>
           </div>
 
           <!-- Step 2 -->
-          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
-            >
-              2
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-step-content">
+              <div class="process-icon">
+                <i class="fas fa-check-circle"></i>
+                <div class="process-number">2</div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-semibold mb-3 text-primary">
+                  Bestätigung erhalten
+                </h3>
+                <p class="text-gray-300">
+                  Sie erhalten umgehend eine Terminbestätigung mit allen
+                  wichtigen Informationen zum vereinbarten Service.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Bestätigung erhalten</h3>
-            <p class="text-gray-400">
-              Sie erhalten eine Terminbestätigung mit allen wichtigen
-              Informationen.
-            </p>
           </div>
 
           <!-- Step 3 -->
-          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-            <div
-              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
-            >
-              3
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-step-content">
+              <div class="process-icon">
+                <i class="fas fa-truck"></i>
+                <div class="process-number">3</div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-semibold mb-3 text-primary">
+                  Wir kommen zu Ihnen
+                </h3>
+                <p class="text-gray-300">
+                  Unser Team erscheint pünktlich zum vereinbarten Termin mit
+                  allem nötigen Spezialequipment für Ihr Fahrzeug.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Wir kommen zu Ihnen</h3>
-            <p class="text-gray-400">
-              Unser Team erscheint pünktlich mit allem nötigen Equipment.
-            </p>
           </div>
 
           <!-- Step 4 -->
-          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-            <div
-              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
-            >
-              4
+          <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+            <div class="process-step-content">
+              <div class="process-icon">
+                <i class="fas fa-tools"></i>
+                <div class="process-number">4</div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-xl font-semibold mb-3 text-primary">
+                  Professioneller Service
+                </h3>
+                <p class="text-gray-300">
+                  Wir führen den Reifenwechsel fachgerecht durch und Sie können
+                  ohne Zeitverlust sofort weiterfahren.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Professioneller Service</h3>
-            <p class="text-gray-400">
-              Wir führen den Reifenwechsel fachgerecht durch und Sie können
-              direkt weiterfahren.
-            </p>
           </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="500">
+          <a href="kontakt.html" class="btn btn-primary">
+            Jetzt Termin vereinbaren <i class="fas fa-arrow-right ml-2"></i>
+          </a>
         </div>
       </div>
     </section>
