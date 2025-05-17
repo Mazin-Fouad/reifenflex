@@ -807,30 +807,107 @@
           e.preventDefault();
           
           if (validateStep(2)) {
-            // In a real application, you would submit the form to a server here
-            // For demo purposes, we'll just show the success message
-            form.style.display = 'none';
-            successMessage.classList.remove('hidden');
-            successMessage.classList.add('block');
+            // Spinner oder Lade-Anzeige könnte hier hinzugefügt werden
+            const submitButton = document.querySelector('.submit-button');
+            if (submitButton) {
+              submitButton.disabled = true;
+              submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Wird gesendet...';
+            }
             
-            // Scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth' });
+            // Formular-Daten sammeln
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('vehicle', document.getElementById('vehicle').value);
+            formData.append('date', document.getElementById('date-picker').value);
             
-            // In a real application, you would send the form data to your server
-            // fetch('/submit-appointment', {
-            //   method: 'POST',
-            //   body: new FormData(form)
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //   form.style.display = 'none';
-            //   successMessage.classList.remove('hidden');
-            //   successMessage.classList.add('block');
-            // })
-            // .catch(error => {
-            //   console.error('Error:', error);
-            //   alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.');
-            // });
+            // Zeit-Slot überprüfen
+            const selectedTimeSlot = document.querySelector('input[name="time-slot"]:checked');
+            if (selectedTimeSlot) {
+              formData.append('time', selectedTimeSlot.value);
+            }
+            
+            // Service-Typ
+            const serviceSelect = document.getElementById('service-type');
+            const selectedService = serviceSelect.options[serviceSelect.selectedIndex].text;
+            formData.append('service', selectedService);
+            
+            // Nachricht (optional)
+            if (document.getElementById('message').value) {
+              formData.append('message', document.getElementById('message').value);
+            }
+            
+            // Debug-Log für Formular-Daten
+            console.log('Formulardaten werden gesendet:', {
+              name: document.getElementById('name').value,
+              email: document.getElementById('email').value,
+              date: document.getElementById('date-picker').value,
+              time: selectedTimeSlot ? selectedTimeSlot.value : 'keine Auswahl'
+            });
+            
+            // Formular an den Server senden
+            fetch('send-email.php', {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => {
+              console.log('Server Antwort Status:', response.status);
+              return response.json().catch(error => {
+                // Bei JSON-Parse-Fehlern manuelle Rückgabe
+                console.error('JSON Parse Fehler:', error);
+                return { success: false, message: 'Fehler beim Verarbeiten der Serverantwort' };
+              });
+            })
+            .then(data => {
+              console.log('Verarbeitete Daten vom Server:', data);
+              
+              if (data.success) {
+                // Bei Erfolg das Formular ausblenden und Erfolgsmeldung anzeigen
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('block');
+                
+                // Zum Erfolgsmeldung scrollen
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                // Bei Fehler eine Meldung anzeigen
+                console.error('Fehler vom Server:', data.message);
+                
+                // Im lokalen Modus trotzdem erfolgreich fortfahren
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                  console.log('Lokaler Modus: Zeige trotz Fehler Erfolgsmeldung');
+                  form.style.display = 'none';
+                  successMessage.classList.remove('hidden');
+                  successMessage.classList.add('block');
+                  successMessage.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  alert('Es ist ein Fehler aufgetreten: ' + data.message);
+                  if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<i class="fas fa-paper-plane mr-3"></i> Anfrage absenden';
+                  }
+                }
+              }
+            })
+            .catch(error => {
+              console.error('Netzwerkfehler:', error);
+              
+              // Im lokalen Modus trotzdem erfolgreich fortfahren
+              if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.log('Lokaler Modus: Zeige trotz Fehler Erfolgsmeldung');
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('block');
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.');
+                if (submitButton) {
+                  submitButton.disabled = false;
+                  submitButton.innerHTML = '<i class="fas fa-paper-plane mr-3"></i> Anfrage absenden';
+                }
+              }
+            });
           }
         });
       });
