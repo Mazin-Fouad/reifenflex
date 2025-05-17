@@ -288,3 +288,41 @@
     font-size: 0.9rem;
   }
 }
+
+/* Kontakt Form Highlight Effect */
+@keyframes highlightForm {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.5);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    transform: scale(1);
+  }
+}
+
+.highlight-form {
+  animation: highlightForm 1.5s ease-out;
+}
+
+/* Contact Form Button Effects */
+#contact-form-button {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-button:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Form Input Focus Effects */
+#kontakt-formular input:focus,
+#kontakt-formular textarea:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}

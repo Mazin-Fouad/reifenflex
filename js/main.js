@@ -1,5 +1,21 @@
 // Mobile navigation toggle
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS (Animate on Scroll)
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 800,
+      once: false,
+      offset: 100,
+    });
+  } else {
+    // Fallback wenn AOS nicht verfügbar ist:
+    // Elemente sichtbar machen, die normalerweise durch AOS animiert werden
+    document.querySelectorAll("[data-aos]").forEach(function (el) {
+      el.style.opacity = "1";
+      el.style.transform = "none";
+    });
+  }
+
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const closeMobileMenuButton = document.getElementById("close-mobile-menu");
   const mobileNav = document.getElementById("mobile-nav");
@@ -27,6 +43,26 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.remove("overflow-hidden");
     });
   });
+
+  // Kontaktformular Button Smooth-Scroll
+  const contactFormButton = document.getElementById("contact-form-button");
+  if (contactFormButton) {
+    contactFormButton.addEventListener("click", function () {
+      const formElement = document.getElementById("kontakt-formular");
+      if (formElement) {
+        formElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        // Optional: Highlight-Effekt für das Formular
+        formElement.classList.add("highlight-form");
+        setTimeout(() => {
+          formElement.classList.remove("highlight-form");
+        }, 1500);
+      }
+    });
+  }
 
   // Add smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
