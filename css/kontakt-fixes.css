@@ -282,3 +282,313 @@
 #kontakt-formular button[type="submit"]:hover i {
   transform: translateX(3px);
 }
+
+/* Modernes Formulardesign für Terminbuchung */
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+}
+
+.form-textarea {
+  padding-left: 1rem;
+  resize: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  z-index: 1;
+}
+
+/* Formular Schritte */
+.form-step {
+  display: none !important;
+}
+
+.form-step.active {
+  display: block !important;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress Steps */
+.step-container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid #444;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.step-label {
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.step-container.active .step-circle {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.step-container.active .step-label {
+  color: white;
+  font-weight: 500;
+}
+
+.step-container.completed .step-circle {
+  background-color: #006400;
+  color: white;
+  border-color: #006400;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 2rem;
+}
+
+.next-button,
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.next-button {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: white;
+}
+
+.back-button {
+  background-color: transparent;
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Time Slots */
+.time-slots {
+  margin-top: 0.5rem;
+}
+
+.time-slot-label {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  color: #ccc;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.time-slot-label:hover {
+  border-color: #666;
+}
+
+.time-slot input:checked + .time-slot-label {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Summary */
+.confirmation-container {
+  animation: fadeIn 0.5s;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.summary-value {
+  font-weight: 500;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 100, 255, 0.1);
+  border: 1px solid rgba(0, 100, 255, 0.3);
+  border-radius: 0.5rem;
+}
+
+.info-icon {
+  color: #3b82f6;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Success Animation */
+.success-animation {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.checkmark-circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 180, 0, 0.1);
+  border-radius: 50%;
+}
+
+.checkmark {
+  width: 30px;
+  height: 60px;
+  border-right: 4px solid #00b300;
+  border-bottom: 4px solid #00b300;
+  transform: rotate(45deg) translate(-10px, -15px);
+  animation: checkAnim 0.8s ease;
+}
+
+@keyframes checkAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-10px, -15px) scale(0.2);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(-10px, -15px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) translate(-10px, -15px) scale(1);
+  }
+}
+
+/* Flatpickr Customization */
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n + 1)),
+.flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n + 1)) {
+  box-shadow: -10px 0 0 var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .step-container {
+    width: auto;
+    max-width: 60px;
+  }
+
+  .step-label {
+    font-size: 0.7rem;
+  }
+}
