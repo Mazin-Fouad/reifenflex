@@ -245,6 +245,42 @@
 
 /* Logo styles are imported from logo.css */
 
+/* Gallery Modal styles */
+#gallery-modal {
+  transition: all 0.3s ease;
+}
+
+#gallery-modal.active {
+  display: flex !important;
+}
+
+#scroll-top {
+  transition: all 0.3s ease;
+}
+
+#scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item .fas {
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .fas {
+  transform: rotate(0deg) scale(1.2);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .btn {
