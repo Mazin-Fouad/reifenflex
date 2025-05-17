@@ -691,115 +691,117 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-primary relative overflow-hidden">
-      <!-- Decorative elements -->
-      <div class="absolute top-0 left-0 w-full overflow-hidden">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          class="fill-dark/10 h-16"
-        >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-          ></path>
-        </svg>
-      </div>
+    <section class="py-16 bg-primary">
+      <div class="container mx-auto px-4 md:px-8">
+        <!-- Two-column layout container -->
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <!-- Left column: Text content -->
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8" data-aos="fade-right">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">
+              Überzeugen Sie sich selbst!
+            </h2>
+            <p class="text-lg mb-8 text-dark leading-relaxed">
+              Erleben Sie unseren mobilen Reifenwechselservice in Bruchsal und
+              sparen Sie Zeit und Mühe. Kontaktieren Sie uns heute!
+            </p>
 
-      <div
-        class="absolute -left-20 -top-20 w-64 h-64 bg-dark/10 rounded-full blur-3xl"
-      ></div>
-      <div
-        class="absolute -right-20 -bottom-20 w-64 h-64 bg-dark/10 rounded-full blur-3xl"
-      ></div>
+            <!-- Trust indicators as badges -->
+            <div class="flex flex-wrap gap-4 mb-8">
+              <div class="flex items-center bg-dark/10 py-2 px-4 rounded-full">
+                <i class="fas fa-shield-alt text-dark mr-2"></i>
+                <span class="text-dark text-sm font-medium"
+                  >Sicher & Zuverlässig</span
+                >
+              </div>
+              <div class="flex items-center bg-dark/10 py-2 px-4 rounded-full">
+                <i class="fas fa-medal text-dark mr-2"></i>
+                <span class="text-dark text-sm font-medium">Top Service</span>
+              </div>
+              <div class="flex items-center bg-dark/10 py-2 px-4 rounded-full">
+                <i class="fas fa-check-circle text-dark mr-2"></i>
+                <span class="text-dark text-sm font-medium">Faire Preise</span>
+              </div>
+            </div>
 
-      <div class="container mx-auto px-4 text-center relative z-10">
-        <div data-aos="zoom-in">
-          <h2 class="text-3xl md:text-5xl font-bold mb-6 text-dark">
-            Überzeugen Sie sich
-            <span class="relative inline-block">
-              selbst
-              <span
-                class="absolute bottom-2 left-0 w-full h-2 bg-dark/20 rounded-full"
-              ></span> </span
-            >!
-          </h2>
-          <p class="text-xl mb-10 max-w-3xl mx-auto text-dark">
-            Erleben Sie unseren mobilen Reifenwechselservice in Bruchsal und
-            sparen Sie Zeit und Mühe. Kontaktieren Sie uns heute!
-          </p>
+            <!-- CTA buttons -->
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="kontakt.html"
+                class="flex items-center justify-center bg-dark text-white py-3 px-8 rounded-lg font-medium hover:bg-gray-900 transition-all duration-300"
+              >
+                <i class="fas fa-envelope mr-2"></i>
+                Kontakt aufnehmen
+              </a>
+
+              <a
+                href="service.html"
+                class="flex items-center justify-center border-2 border-dark bg-transparent text-dark py-3 px-8 rounded-lg font-medium hover:bg-dark hover:text-white transition-all duration-300"
+              >
+                <i class="fas fa-clipboard-list mr-2"></i>
+                Services ansehen
+              </a>
+            </div>
+          </div>
+
+          <!-- Right column: Service highlights -->
+          <div class="md:w-1/2" data-aos="fade-left">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-dark p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-clock text-dark text-xl"></i>
+                  </div>
+                  <h3 class="text-dark font-semibold">Zeitsparend</h3>
+                </div>
+                <p class="text-dark/80">
+                  Wir kommen zu Ihnen und sparen Ihnen den Weg zur Werkstatt.
+                </p>
+              </div>
+
+              <div class="bg-dark p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-tools text-dark text-xl"></i>
+                  </div>
+                  <h3 class="text-dark font-semibold">Professionell</h3>
+                </div>
+                <p class="text-dark/80">
+                  Qualifizierte Experten mit modernem Equipment.
+                </p>
+              </div>
+
+              <div class="bg-dark p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-map-marker-alt text-dark text-xl"></i>
+                  </div>
+                  <h3 class="text-dark font-semibold">Vor Ort Service</h3>
+                </div>
+                <p class="text-dark/80">
+                  In Bruchsal & Umgebung immer für Sie da.
+                </p>
+              </div>
+
+              <div class="bg-dark p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <i class="fas fa-thumbs-up text-dark text-xl"></i>
+                  </div>
+                  <h3 class="text-dark font-semibold">Zufriedenheit</h3>
+                </div>
+                <p class="text-dark/80">Garantiert für alle unsere Kunden.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div
-          class="flex flex-col sm:flex-row justify-center gap-6"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <a
-            href="kontakt.html"
-            class="inline-block bg-dark text-white py-4 px-8 rounded-md text-lg font-medium hover:bg-gray-800 transition-all hover:translate-y-[-5px] hover:shadow-lg shadow-md group"
-          >
-            <i class="fas fa-envelope mr-2 group-hover:animate-pulse"></i>
-            Kontakt aufnehmen
-          </a>
-          <a
-            href="service.html"
-            class="inline-block border-2 border-dark text-dark py-4 px-8 rounded-md text-lg font-medium hover:bg-dark hover:text-white transition-all hover:translate-y-[-5px] hover:shadow-lg shadow-md group"
-          >
-            <i class="fas fa-clipboard-list mr-2 group-hover:animate-pulse"></i>
-            Services ansehen
-          </a>
-        </div>
-
-        <!-- Service highlights -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto"
-        >
-          <div
-            class="bg-dark/10 p-4 rounded-lg"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <i class="fas fa-clock text-dark text-3xl mb-2"></i>
-            <p class="text-dark font-medium">Zeitsparend</p>
-          </div>
-          <div
-            class="bg-dark/10 p-4 rounded-lg"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <i class="fas fa-tools text-dark text-3xl mb-2"></i>
-            <p class="text-dark font-medium">Professionell</p>
-          </div>
-          <div
-            class="bg-dark/10 p-4 rounded-lg"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <i class="fas fa-map-marker-alt text-dark text-3xl mb-2"></i>
-            <p class="text-dark font-medium">Vor Ort Service</p>
-          </div>
-          <div
-            class="bg-dark/10 p-4 rounded-lg"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <i class="fas fa-thumbs-up text-dark text-3xl mb-2"></i>
-            <p class="text-dark font-medium">100% Zufriedenheit</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom wave decoration -->
-      <div class="absolute bottom-0 left-0 w-full overflow-hidden rotate-180">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          class="fill-dark/10 h-16"
-        >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-          ></path>
-        </svg>
       </div>
     </section>
 
