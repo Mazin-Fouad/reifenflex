@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ReifenFlex - Professioneller mobiler Reifenwechselservice in Bruchsal & Umgebung. Entdecken Sie unsere Serviceangebote!"
+    />
+    <title>Unser Service - ReifenFlex | Mobiler Reifenwechselservice</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/logo.css" />
+    <link rel="stylesheet" href="css/service.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-dark text-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-dark shadow-md z-40">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <div class="logo-icon"></div>
+          <div class="logo-text">REIFEN<span>FLEX</span></div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-white hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a href="service.html" class="text-primary transition-colors"
+            >Service</a
+          >
+          <a
+            href="ueber-uns.html"
+            class="text-white hover:text-primary transition-colors"
+            >Über uns</a
+          >
+          <a
+            href="kontakt.html"
+            class="text-white hover:text-primary transition-colors"
+            >Kontakt</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav hidden">
+      <div class="flex justify-end p-4">
+        <button id="close-mobile-menu" class="text-white focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col items-center mt-10">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="service.html" class="mobile-nav-link">Service</a>
+        <a href="ueber-uns.html" class="mobile-nav-link">Über uns</a>
+        <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20">
+      <!-- Background with overlay -->
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-dark to-black opacity-85"
+        ></div>
+        <img
+          src="images/service.jpg"
+          alt="ReifenFlex Service"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 relative z-10" data-aos="fade-up">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Unser <span class="text-primary">Service</span>
+          </h1>
+          <p class="text-lg mb-8">
+            Wir bringen professionellen Reifenservice direkt zu Ihnen. Kein
+            Warten, kein Stress - einfach bequem und zeitsparend.
+          </p>
+          <a href="#service-packages" class="btn btn-primary inline-block">
+            Mehr erfahren
+            <i class="fas fa-chevron-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Introduction -->
+    <section class="py-16 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1" data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-6">
+              Mobiler Reifenservice
+              <span class="text-primary">für Ihre Bequemlichkeit</span>
+            </h2>
+            <p class="mb-6">
+              Bei ReifenFlex verstehen wir, dass Ihre Zeit wertvoll ist.
+              Deswegen kommen wir zu Ihnen - ob zu Hause oder ins Büro - und
+              führen den Reifenwechsel professionell vor Ort durch.
+            </p>
+            <p class="mb-6">
+              Unsere erfahrenen Techniker bringen alles mit, was für einen
+              reibungslosen Reifenwechsel nötig ist. Mit modernster Ausrüstung
+              und jahrelanger Erfahrung garantieren wir einen schnellen und
+              zuverlässigen Service.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-primary text-2xl mr-3"></i>
+                <span>Schneller Service</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-primary text-2xl mr-3"></i>
+                <span>Professionelle Ausrüstung</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-primary text-2xl mr-3"></i>
+                <span>Erfahrene Techniker</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-primary text-2xl mr-3"></i>
+                <span>Termintreue</span>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2" data-aos="fade-left">
+            <img
+              src="images/service.jpg"
+              alt="Mobiler Reifenservice"
+              class="rounded-lg shadow-xl w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Packages -->
+    <section class="py-16 bg-dark" id="service-packages">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">
+            Unsere <span class="text-primary">Service-Pakete</span>
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            Wählen Sie aus unseren maßgeschneiderten Service-Paketen das
+            passende Angebot für Ihre Bedürfnisse. Alle Preise verstehen sich
+            inklusive Anfahrt.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Standard Package -->
+          <div
+            class="service-card bg-secondary rounded-lg overflow-hidden transition-transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="p-1 bg-gradient-to-r from-gray-700 to-gray-600">
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="images/service-standard.jpg"
+                  alt="Standard Reifenwechsel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-center">Standard</h3>
+              <p class="text-center text-gray-400 mb-6">
+                Der grundlegende Service für Ihren Reifenwechsel
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Reifenwechsel vor Ort</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Fachmännisches Auswuchten</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Anzugsmoment nach Herstellerangaben</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Luftdruck nach Herstellerangaben</span>
+                </li>
+              </ul>
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold text-primary">49 €</span>
+                <span class="text-gray-400 block text-sm">inkl. MwSt.</span>
+              </div>
+              <div class="text-center">
+                <a href="kontakt.html" class="btn btn-primary w-full"
+                  >Termin vereinbaren</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Comfort Package -->
+          <div
+            class="service-card bg-secondary rounded-lg overflow-hidden transition-transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="p-1 bg-gradient-to-r from-primary/40 to-red-900/60 relative"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="images/service.jpg"
+                  alt="Comfort Reifenwechsel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-center">Comfort</h3>
+              <p class="text-center text-gray-400 mb-6">
+                Unser meistgebuchtes Servicepaket
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Alle Leistungen des Standard-Pakets</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Professionelle Reifenreinigung</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Profiltiefenmessung mit Protokoll</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Ventile erneuern bei Bedarf</span>
+                </li>
+              </ul>
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold text-primary">65 €</span>
+                <span class="text-gray-400 block text-sm">inkl. MwSt.</span>
+              </div>
+              <div class="text-center">
+                <a href="kontakt.html" class="btn btn-primary w-full"
+                  >Termin vereinbaren</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Package -->
+          <div
+            class="service-card bg-secondary rounded-lg overflow-hidden transition-transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="p-1 bg-gradient-to-r from-yellow-600/40 to-yellow-700/60"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="images/service-premium.jpg"
+                  alt="Premium Reifenwechsel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-center">Premium</h3>
+              <p class="text-center text-gray-400 mb-6">
+                Das Rundum-Sorglos-Paket
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Alle Leistungen des Comfort-Pakets</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Professionelle Radbolzen-Reinigung</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Reifenpflege für längere Haltbarkeit</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Digitaler Zustandsbericht</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-3"></i>
+                  <span>Saisonale Reifeneinlagerung (optional)</span>
+                </li>
+              </ul>
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold text-primary">89 €</span>
+                <span class="text-gray-400 block text-sm">inkl. MwSt.</span>
+              </div>
+              <div class="text-center">
+                <a href="kontakt.html" class="btn btn-primary w-full"
+                  >Termin vereinbaren</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">
+            So <span class="text-primary">funktioniert</span> es
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            In nur wenigen einfachen Schritten zu Ihrem mobilen Reifenservice.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Termin vereinbaren</h3>
+            <p class="text-gray-400">
+              Kontaktieren Sie uns per Telefon, E-Mail oder über unser
+              Kontaktformular.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Bestätigung erhalten</h3>
+            <p class="text-gray-400">
+              Sie erhalten eine Terminbestätigung mit allen wichtigen
+              Informationen.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Wir kommen zu Ihnen</h3>
+            <p class="text-gray-400">
+              Unser Team erscheint pünktlich mit allem nötigen Equipment.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="w-20 h-20 rounded-full bg-primary text-white flex justify-center items-center text-3xl font-bold mx-auto mb-6"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Professioneller Service</h3>
+            <p class="text-gray-400">
+              Wir führen den Reifenwechsel fachgerecht durch und Sie können
+              direkt weiterfahren.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service FAQ -->
+    <section class="py-16 bg-dark">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">
+            Häufig gestellte <span class="text-primary">Fragen</span>
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            Hier finden Sie Antworten auf die häufigsten Fragen zu unserem
+            mobilen Reifenservice.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <!-- FAQ Item 1 -->
+          <div
+            class="mb-6 bg-secondary rounded-lg overflow-hidden"
+            data-aos="fade-up"
+          >
+            <button
+              class="faq-toggle w-full text-left p-5 flex justify-between items-center focus:outline-none"
+              aria-expanded="false"
+              aria-controls="faq1"
+            >
+              <span class="text-lg font-medium"
+                >Wie lange dauert der Reifenwechsel?</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary transition-transform"
+              ></i>
+            </button>
+            <div id="faq1" class="faq-content px-5 pb-5 hidden">
+              <p>
+                Bei einem normalen PKW dauert der Reifenwechsel in der Regel
+                zwischen 30 und 45 Minuten. Bei größeren Fahrzeugen oder bei
+                speziellen Anforderungen kann es etwas länger dauern. Wir
+                informieren Sie vorab über die genaue Dauer.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            class="mb-6 bg-secondary rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <button
+              class="faq-toggle w-full text-left p-5 flex justify-between items-center focus:outline-none"
+              aria-expanded="false"
+              aria-controls="faq2"
+            >
+              <span class="text-lg font-medium"
+                >In welchem Gebiet bietet ReifenFlex seinen Service an?</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary transition-transform"
+              ></i>
+            </button>
+            <div id="faq2" class="faq-content px-5 pb-5 hidden">
+              <p>
+                Wir bieten unseren mobilen Reifenservice im Raum Bruchsal und
+                Umgebung an. Dazu zählen unter anderem Karlsruhe, Bretten,
+                Waghäusel, Philippsburg und Östringen. Bei Fragen zu Ihrem
+                spezifischen Standort kontaktieren Sie uns bitte.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            class="mb-6 bg-secondary rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <button
+              class="faq-toggle w-full text-left p-5 flex justify-between items-center focus:outline-none"
+              aria-expanded="false"
+              aria-controls="faq3"
+            >
+              <span class="text-lg font-medium"
+                >Wird der Luftdruck korrekt eingestellt?</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary transition-transform"
+              ></i>
+            </button>
+            <div id="faq3" class="faq-content px-5 pb-5 hidden">
+              <p>
+                Ja, selbstverständlich. Wir stellen den Reifendruck exakt nach
+                den Herstellerangaben ein. Diese Informationen finden wir in der
+                Regel an der B-Säule Ihres Fahrzeugs oder in der Tankklappe. Bei
+                besonderen Anforderungen berücksichtigen wir natürlich auch Ihre
+                individuellen Wünsche.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            class="mb-6 bg-secondary rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <button
+              class="faq-toggle w-full text-left p-5 flex justify-between items-center focus:outline-none"
+              aria-expanded="false"
+              aria-controls="faq4"
+            >
+              <span class="text-lg font-medium"
+                >Welche Zahlungsmethoden werden akzeptiert?</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary transition-transform"
+              ></i>
+            </button>
+            <div id="faq4" class="faq-content px-5 pb-5 hidden">
+              <p>
+                Wir akzeptieren Barzahlung, EC-Karte und alle gängigen
+                Kreditkarten. Auf Wunsch ist auch eine Rechnungsstellung mit
+                Überweisung möglich (nur für Firmenkunden nach vorheriger
+                Absprache).
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div
+            class="mb-6 bg-secondary rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <button
+              class="faq-toggle w-full text-left p-5 flex justify-between items-center focus:outline-none"
+              aria-expanded="false"
+              aria-controls="faq5"
+            >
+              <span class="text-lg font-medium"
+                >Was passiert mit meinen alten Reifen?</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary transition-transform"
+              ></i>
+            </button>
+            <div id="faq5" class="faq-content px-5 pb-5 hidden">
+              <p>
+                Wir können Ihre alten Reifen gegen eine kleine Gebühr
+                fachgerecht entsorgen. Alternativ bieten wir auch eine saisonale
+                Einlagerung Ihrer Reifen an, sodass Sie sich nicht um die
+                Aufbewahrung kümmern müssen. Sprechen Sie uns gerne darauf an.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div
+          class="bg-gradient-to-r from-gray-900 to-black p-8 md:p-12 rounded-lg shadow-lg relative overflow-hidden"
+        >
+          <div class="absolute inset-0 opacity-10">
+            <img
+              src="images/tire-icon.svg"
+              alt=""
+              class="w-full h-full object-cover opacity-5"
+            />
+          </div>
+          <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+              Bereit für Ihren <span class="text-primary">Reifenwechsel?</span>
+            </h2>
+            <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
+              Vereinbaren Sie noch heute einen Termin und erleben Sie unseren
+              professionellen Service. Wir kommen zu Ihnen, wann und wo es Ihnen
+              passt.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row justify-center gap-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a
+                href="tel:+491234567890"
+                class="btn btn-primary flex items-center justify-center"
+              >
+                <i class="fas fa-phone-alt mr-2"></i> Jetzt anrufen
+              </a>
+              <a
+                href="kontakt.html"
+                class="btn btn-outline-primary flex items-center justify-center"
+              >
+                <i class="fas fa-envelope mr-2"></i> Kontaktformular
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Service Offers (Optional) -->
+    <section class="py-16 bg-dark">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">
+            Weitere <span class="text-primary">Leistungen</span>
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            Neben unserem Kerngeschäft des mobilen Reifenwechsels bieten wir
+            folgende Zusatzleistungen an:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Additional Service 1 -->
+          <div
+            class="bg-secondary p-6 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-warehouse"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Reifeneinlagerung</h3>
+            <p class="text-gray-400 mb-4">
+              Wir lagern Ihre Reifen fachgerecht in unserem klimatisierten Lager
+              ein, damit Sie keinen wertvollen Platz opfern müssen.
+            </p>
+            <p class="font-medium">Ab 49 € pro Saison</p>
+          </div>
+
+          <!-- Additional Service 2 -->
+          <div
+            class="bg-secondary p-6 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Reifeninspektion</h3>
+            <p class="text-gray-400 mb-4">
+              Professionelle Überprüfung Ihrer Reifen auf Schäden, Verschleiß
+              und Profiltiefe mit detailliertem Zustandsbericht.
+            </p>
+            <p class="font-medium">Ab 29 €</p>
+          </div>
+
+          <!-- Additional Service 3 -->
+          <div
+            class="bg-secondary p-6 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Reifenverkauf</h3>
+            <p class="text-gray-400 mb-4">
+              Wir beraten Sie bei der Auswahl neuer Reifen und liefern diese
+              direkt zum Montagetermin mit bequemer Bezahlung.
+            </p>
+            <p class="font-medium">Preise auf Anfrage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Company Info -->
+          <div>
+            <div class="logo mb-4">
+              <div class="logo-icon"></div>
+              <div class="logo-text">REIFEN<span>FLEX</span></div>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Ihr professioneller mobiler Reifenwechselservice in Bruchsal und
+              Umgebung.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-primary"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-primary"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-primary"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-400 hover:text-primary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="service.html" class="text-gray-400 hover:text-primary"
+                  >Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ueber-uns.html"
+                  class="text-gray-400 hover:text-primary"
+                  >Über uns</a
+                >
+              </li>
+              <li>
+                <a href="kontakt.html" class="text-gray-400 hover:text-primary"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-primary mt-1 mr-2"></i>
+                <span class="text-gray-400">Bruchsal, Baden-Württemberg</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone text-primary mt-1 mr-2"></i>
+                <span class="text-gray-400">+49 123 456789</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-primary mt-1 mr-2"></i>
+                <span class="text-gray-400">info@reifenflex.de</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Opening Hours -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Öffnungszeiten</h3>
+            <ul class="space-y-2">
+              <li class="text-gray-400">Montag - Freitag: 8:00 - 18:00</li>
+              <li class="text-gray-400">Samstag: 9:00 - 14:00</li>
+              <li class="text-gray-400">Sonntag: Geschlossen</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 pt-6">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2025 ReifenFlex. Alle Rechte vorbehalten
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="datenschutz.html"
+                class="text-gray-400 hover:text-primary text-sm"
+                >Datenschutz</a
+              >
+              <a
+                href="impressum.html"
+                class="text-gray-400 hover:text-primary text-sm"
+                >Impressum</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scroll-top"
+      class="fixed bottom-5 right-5 bg-primary text-white p-2 rounded-full opacity-0 invisible transition-all z-50"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+        once: true, // whether animation should happen only once - while scrolling down
+      });
+
+      // Basic Tab functionality (can be expanded in service.js)
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Deactivate all buttons and hide all content
+          tabButtons.forEach((btn) => {
+            btn.classList.remove("tab-active");
+            btn.setAttribute("aria-selected", "false");
+          });
+          tabContents.forEach((content) => {
+            content.style.display = "none";
+            content.classList.remove("active");
+          });
+
+          // Activate clicked button and show corresponding content
+          button.classList.add("tab-active");
+          button.setAttribute("aria-selected", "true");
+          const targetContentId = button.getAttribute("aria-controls");
+          const targetContent = document.getElementById(targetContentId);
+          if (targetContent) {
+            targetContent.style.display = "block"; // Or 'flex', 'grid' depending on layout
+            // For fade-in, ensure AOS or custom CSS handles it. 'active' class can be used.
+            setTimeout(() => targetContent.classList.add("active"), 50); // Small delay for transition
+          }
+        });
+      });
+
+      // Basic FAQ Accordion
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", () => {
+            const content = document.getElementById(
+              toggle.getAttribute("aria-controls")
+            );
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+
+            // Toggle aria-expanded attribute
+            toggle.setAttribute("aria-expanded", !isExpanded);
+
+            // Toggle the icon rotation
+            const icon = toggle.querySelector("i");
+            if (icon) {
+              icon.style.transform = !isExpanded
+                ? "rotate(180deg)"
+                : "rotate(0)";
+            }
+
+            // Toggle content visibility
+            if (content) {
+              if (!isExpanded) {
+                content.classList.remove("hidden");
+                content.classList.add("open");
+              } else {
+                content.classList.add("hidden");
+                content.classList.remove("open");
+              }
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- Schema.org JSON-LD structured data for service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Mobiler Reifenwechselservice",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "ReifenFlex",
+          "image": "https://www.reifenflex.de/images/logo.png", // Beispiel-URL, bitte anpassen
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Musterstraße 123", // Ggf. anpassen, wenn nur Servicegebiet
+            "addressLocality": "Bruchsal",
+            "postalCode": "76646",
+            "addressCountry": "DE"
+          },
+          "telephone": "+491234567890" // Beispielnummer
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea", // Oder City, PostalCode etc.
+          "name": "Bruchsal und Umgebung"
+        },
+        "name": "Mobiler Reifenwechsel Service",
+        "description": "Professioneller mobiler Reifenwechselservice in Bruchsal und Umgebung. Wir kommen zu Ihnen und wechseln Ihre Reifen vor Ort.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Standard Reifenwechsel",
+            "price": "49.00",
+            "priceCurrency": "EUR",
+            "description": "Professioneller Reifenwechsel vor Ort (PKW), inklusive Wuchten der Räder."
+          },
+          {
+            "@type": "Offer",
+            "name": "Comfort Reifenwechsel",
+            "price": "65.00",
+            "priceCurrency": "EUR",
+            "description": "Reifenwechsel mit Reifenreinigung, Profiltiefenmessung und Luftdruckkontrolle."
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium Reifenwechsel",
+            "price": "89.00",
+            "priceCurrency": "EUR",
+            "description": "Komplettpaket mit Reifenpflege, Radbolzen-Reinigung und digitalem Zustandsbericht."
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #1a1a1a;
+  --dark-color: #121212;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.btn {
+  @apply py-2 px-4 rounded font-semibold transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-red-700;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center;
+}
+
+.service-card {
+  @apply bg-secondary p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex flex-col h-full;
+}
+
+/* Responsive navigation */
+.mobile-nav {
+  @apply fixed top-0 left-0 w-full h-full bg-dark z-50 transform transition-transform duration-300;
+}
+
+.mobile-nav.hidden {
+  @apply -translate-x-full;
+}
+
+.mobile-nav-link {
+  @apply block py-4 px-6 text-lg border-b border-gray-800 text-white hover:text-primary;
+}
+
+/* Animation Klassen */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.feature-tag {
+  transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(255, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Hero Sektion Custom Styles */
+/* Icon Animation */
+.fas.fa-cog {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Galerie Styling */
+.gallery-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4;
+}
+
+.gallery-item {
+  @apply relative overflow-hidden rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105;
+}
+
+.gallery-item img {
+  @apply w-full h-full object-cover;
+}
+
+/* Modal Styling */
+.modal {
+  @apply fixed inset-0 z-50 hidden bg-black bg-opacity-80 flex items-center justify-center p-4;
+}
+
+.modal.active {
+  @apply flex;
+}
+
+.modal-content {
+  @apply relative max-w-4xl w-full bg-transparent rounded-lg overflow-hidden;
+}
+
+.modal-image {
+  @apply w-full h-auto rounded-lg;
+}
+
+.modal-close {
+  @apply absolute top-2 right-2 text-white bg-primary bg-opacity-80 p-2 rounded-full hover:bg-opacity-100 transition-all;
+}

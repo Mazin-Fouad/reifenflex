@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung. Buche jetzt deinen Termin online!"
+    />
+    <title>
+      ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung
+    </title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/logo.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-dark text-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-dark shadow-md z-40">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <div class="logo-icon"></div>
+          <div class="logo-text">REIFEN<span>FLEX</span></div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-white hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="service.html"
+            class="text-white hover:text-primary transition-colors"
+            >Service</a
+          >
+          <a
+            href="ueber-uns.html"
+            class="text-white hover:text-primary transition-colors"
+            >Über uns</a
+          >
+          <a
+            href="kontakt.html"
+            class="text-white hover:text-primary transition-colors"
+            >Kontakt</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav hidden">
+      <div class="flex justify-end p-4">
+        <button id="close-mobile-menu" class="text-white focus:outline-none">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col items-center mt-10">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="service.html" class="mobile-nav-link">Service</a>
+        <a href="ueber-uns.html" class="mobile-nav-link">Über uns</a>
+        <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
+      <!-- Dynamic background with gradient overlay -->
+      <div class="absolute inset-0 bg-dark z-0">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/70 z-10"
+        ></div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-[url('images/service-premium.jpg')] bg-cover bg-center bg-no-repeat opacity-40 z-0"
+        ></div>
+      </div>
+
+      <!-- Animated elements -->
+      <div class="absolute inset-0 z-20">
+        <div
+          class="absolute top-1/4 left-[10%] w-16 h-16 bg-primary rounded-full opacity-10 animate-pulse"
+        ></div>
+        <div
+          class="absolute top-1/3 right-[15%] w-32 h-32 bg-primary rounded-full opacity-5 animate-pulse"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-[20%] w-24 h-24 bg-primary rounded-full opacity-5 animate-pulse"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 relative z-30 py-20">
+        <div class="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
+          <div class="w-full md:w-3/5 text-center md:text-left mb-10 md:mb-0">
+            <h1
+              class="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 leading-tight animate__animated animate__fadeInUp"
+            >
+              <span class="block opacity-90"
+                >Mobiler Reifenwechsel in Bruchsal</span
+              >
+              <span
+                class="text-primary text-5xl md:text-6xl lg:text-8xl tracking-tight"
+                >ReifenFlex</span
+              >
+            </h1>
+            <p
+              class="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl md:ml-1 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.3s"
+            >
+              Professioneller mobiler Reifenwechselservice - wir kommen zu
+              Ihnen, wann und wo es Ihnen passt.
+            </p>
+            <div
+              class="flex flex-wrap gap-4 justify-center md:justify-start animate__animated animate__fadeInUp"
+              style="animation-delay: 0.6s"
+            >
+              <a href="kontakt.html" class="btn btn-primary px-8 py-3 text-lg">
+                Termin buchen
+              </a>
+              <a
+                href="service.html"
+                class="btn border-2 border-white hover:bg-white/10 px-8 py-3 text-lg"
+              >
+                Unsere Services
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="w-full md:w-2/5 flex justify-center animate__animated animate__fadeInRight"
+            style="animation-delay: 0.9s"
+          >
+            <div class="relative w-72 h-72 md:w-96 md:h-96">
+              <!-- Decorative circles -->
+              <div
+                class="absolute inset-0 rounded-full border-4 border-primary opacity-20 animate-ping"
+                style="animation-duration: 3s"
+              ></div>
+              <div
+                class="absolute inset-5 rounded-full border-4 border-primary opacity-40"
+              ></div>
+
+              <!-- Center image/icon -->
+              <div
+                class="absolute inset-10 rounded-full bg-primary/20 flex items-center justify-center"
+              >
+                <i class="fas fa-cog text-6xl md:text-7xl text-primary"></i>
+              </div>
+
+              <!-- Features around the circle -->
+              <div
+                class="feature-tag absolute -top-2 left-1/2 -translate-x-1/2 bg-secondary px-4 py-1 rounded-full shadow-lg"
+              >
+                <span class="text-sm font-medium">Zeitsparend</span>
+              </div>
+              <div
+                class="feature-tag absolute top-1/2 -right-2 -translate-y-1/2 bg-secondary px-4 py-1 rounded-full shadow-lg"
+              >
+                <span class="text-sm font-medium">Professionell</span>
+              </div>
+              <div
+                class="feature-tag absolute -bottom-2 left-1/2 -translate-x-1/2 bg-secondary px-4 py-1 rounded-full shadow-lg"
+              >
+                <span class="text-sm font-medium">Bequem</span>
+              </div>
+              <div
+                class="feature-tag absolute top-1/2 -left-2 -translate-y-1/2 bg-secondary px-4 py-1 rounded-full shadow-lg"
+              >
+                <span class="text-sm font-medium">Zuverlässig</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave divider -->
+      <div class="absolute bottom-0 left-0 w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          class="w-full"
+        >
+          <path
+            fill="#1a1a1a"
+            fill-opacity="1"
+            d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-secondary" id="services">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title">Unsere Dienstleistungen</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div class="service-card">
+            <div
+              class="rounded-full overflow-hidden mb-6 mx-auto"
+              style="width: 150px; height: 150px"
+            >
+              <img
+                src="images/service.jpg"
+                alt="Standard Reifenwechsel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Standard</h3>
+            <div class="flex-grow">
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Reifenwechsel
+                  vor Ort
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Auswuchten
+                  inklusive
+                </li>
+              </ul>
+              <p class="text-xl font-bold text-center mb-4">Ab 49 €</p>
+            </div>
+            <div class="text-center mt-auto pt-4">
+              <a href="service.html" class="btn btn-primary">Mehr Info</a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card">
+            <div
+              class="rounded-full overflow-hidden mb-6 mx-auto"
+              style="width: 150px; height: 150px"
+            >
+              <img
+                src="images/service.jpg"
+                alt="Comfort Reifenwechsel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Comfort</h3>
+            <div class="flex-grow">
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Reifenwechsel
+                  vor Ort
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Auswuchten
+                  inklusive
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Reifenreinigung
+                </li>
+              </ul>
+              <p class="text-xl font-bold text-center mb-4">Ab 65 €</p>
+            </div>
+            <div class="text-center mt-auto pt-4">
+              <a href="service.html" class="btn btn-primary">Mehr Info</a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card">
+            <div
+              class="rounded-full overflow-hidden mb-6 mx-auto"
+              style="width: 150px; height: 150px"
+            >
+              <img
+                src="images/service.jpg"
+                alt="Premium Reifenwechsel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Premium</h3>
+            <div class="flex-grow">
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Reifenwechsel
+                  vor Ort
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Auswuchten
+                  inklusive
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Reifenreinigung
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i>
+                  Reifeneinlagerung
+                </li>
+              </ul>
+              <p class="text-xl font-bold text-center mb-4">Ab 90 €</p>
+            </div>
+            <div class="text-center mt-auto pt-4">
+              <a href="service.html" class="btn btn-primary">Mehr Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-dark">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title text-primary">Das sagen unsere Kunden</h2>
+        <div class="flex justify-center mb-6">
+          <a
+            href="https://g.co/kgs/UGN5eK"
+            target="_blank"
+            class="flex items-center space-x-2"
+          >
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="text-gray-300">4.9 von 5 Sternen auf Google</span>
+            <i class="fas fa-external-link-alt text-gray-300"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="rounded-full bg-gray-700 w-10 h-10 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Markus Weber</h4>
+                <div class="flex items-center">
+                  <div class="text-yellow-400 flex mr-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">vor 2 Wochen</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300">
+              Absolut empfehlenswert! Habe kurzfristig einen Termin bekommen, da
+              ich dringend von Winter- auf Sommerreifen wechseln musste. Der
+              Service kam pünktlich zu mir nach Hause und hat alles
+              professionell erledigt. Faire Preise und super freundliches
+              Personal. Das nächste Mal buche ich definitiv wieder bei
+              ReifenFlex!
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="rounded-full bg-gray-700 w-10 h-10 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Julia Neumann</h4>
+                <div class="flex items-center">
+                  <div class="text-yellow-400 flex mr-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">vor 1 Monat</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300">
+              Als berufstätige Mutter habe ich wenig Zeit für Werkstattbesuche.
+              ReifenFlex hat mir das Leben sehr erleichtert! Der Mechaniker kam
+              pünktlich, während ich im Home-Office arbeitete, und wechselte
+              meine Reifen schnell und sauber. Der Preis war transparent und
+              fair. Top Service, den ich gerne weiterempfehle!
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="rounded-full bg-gray-700 w-10 h-10 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Michael Becker</h4>
+                <div class="flex items-center">
+                  <div class="text-yellow-400 flex mr-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">vor 2 Monaten</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300">
+              Sehr guter Service! Habe den Premium-Reifenwechsel gebucht und bin
+              sehr zufrieden. Die Reifen wurden gründlich gereinigt und
+              fachgerecht gelagert. Besonders gut fand ich die kompetente
+              Beratung zur Reifenpflege. Ein kleiner Punkt Abzug nur weil der
+              Termin 15 Minuten später als vereinbart begann, aber das Ergebnis
+              war einwandfrei. 👍
+            </p>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="bg-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="rounded-full bg-gray-700 w-10 h-10 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Sabine Hoffmann</h4>
+                <div class="flex items-center">
+                  <div class="text-yellow-400 flex mr-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm">vor 3 Monaten</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-300">
+              Endlich kein Schleppen der Reifen mehr zur Werkstatt! ReifenFlex
+              kam zu mir auf die Arbeit und hat während meiner Mittagspause die
+              Reifen gewechselt. Super praktisch und zeitsparend. Der Mechaniker
+              war sehr freundlich und hat mir alles genau erklärt. Die
+              Online-Terminbuchung war unkompliziert und die
+              SMS-Benachrichtigung kurz vor dem Termin sehr hilfreich. Volle
+              Empfehlung!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          Bereit für deinen Reifenwechsel?
+        </h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          Buche jetzt deinen Termin online und erlebe unseren professionellen
+          mobilen Reifenservice in Bruchsal und Umgebung.
+        </p>
+        <a
+          href="kontakt.html"
+          class="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all"
+        >
+          Jetzt Termin buchen
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Company Info -->
+          <div>
+            <div class="logo mb-4">
+              <div class="logo-icon"></div>
+              <div class="logo-text">REIFEN<span>FLEX</span></div>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Ihr professioneller mobiler Reifenwechselservice in Bruchsal und
+              Umgebung.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-primary"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-primary"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-primary"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-400 hover:text-primary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="service.html" class="text-gray-400 hover:text-primary"
+                  >Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ueber-uns.html"
+                  class="text-gray-400 hover:text-primary"
+                  >Über uns</a
+                >
+              </li>
+              <li>
+                <a href="kontakt.html" class="text-gray-400 hover:text-primary"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-primary mt-1 mr-2"></i>
+                <span class="text-gray-400">Bruchsal, Baden-Württemberg</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone text-primary mt-1 mr-2"></i>
+                <span class="text-gray-400">+49 123 456789</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-primary mt-1 mr-2"></i>
+                <span class="text-gray-400">info@reifenflex.de</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Opening Hours -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Öffnungszeiten</h3>
+            <ul class="space-y-2">
+              <li class="text-gray-400">Montag - Freitag: 8:00 - 18:00</li>
+              <li class="text-gray-400">Samstag: 9:00 - 14:00</li>
+              <li class="text-gray-400">Sonntag: Geschlossen</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 pt-6">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2025 ReifenFlex. Alle Rechte vorbehalten
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="datenschutz.html"
+                class="text-gray-400 hover:text-primary text-sm"
+                >Datenschutz</a
+              >
+              <a
+                href="impressum.html"
+                class="text-gray-400 hover:text-primary text-sm"
+                >Impressum</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scroll-top"
+      class="fixed bottom-5 right-5 bg-primary text-white p-2 rounded-full opacity-0 invisible transition-all z-50"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
