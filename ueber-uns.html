@@ -907,121 +907,19 @@
     <!-- Scroll to Top Button -->
     <button
       id="scroll-top"
-      class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full opacity-0 invisible transition-all z-50 shadow-lg hover:bg-red-700 hover:scale-110"
+      class="fixed bottom-5 right-5 bg-primary text-white p-2 rounded-full opacity-0 invisible transition-all z-50"
     >
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 800, // values from 0 to 3000, with step 50ms
         once: true, // whether animation should happen only once - while scrolling down
       });
-
-      // Gallery Modal Functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        const galleryItems = document.querySelectorAll(".gallery-item");
-        const modal = document.getElementById("gallery-modal");
-        const modalImage = document.getElementById("modal-image");
-        const modalClose = document.getElementById("modal-close");
-
-        if (galleryItems.length > 0 && modal && modalImage) {
-          galleryItems.forEach((item) => {
-            item.addEventListener("click", function () {
-              const imgSrc = this.querySelector("img").getAttribute("src");
-              const imgAlt = this.querySelector("img").getAttribute("alt");
-
-              modalImage.setAttribute("src", imgSrc);
-              modalImage.setAttribute("alt", imgAlt);
-
-              modal.classList.remove("hidden");
-              modal.classList.add("flex");
-              document.body.classList.add("overflow-hidden");
-            });
-          });
-
-          // Close modal with button
-          if (modalClose) {
-            modalClose.addEventListener("click", function () {
-              modal.classList.add("hidden");
-              modal.classList.remove("flex");
-              document.body.classList.remove("overflow-hidden");
-            });
-          }
-
-          // Close modal by clicking outside
-          modal.addEventListener("click", function (e) {
-            if (e.target === modal) {
-              modal.classList.add("hidden");
-              modal.classList.remove("flex");
-              document.body.classList.remove("overflow-hidden");
-            }
-          });
-
-          // Close modal with Escape key
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-              modal.classList.add("hidden");
-              modal.classList.remove("flex");
-              document.body.classList.remove("overflow-hidden");
-            }
-          });
-        }
-
-        // Add hover effects to testimonials
-        const testimonialCards = document.querySelectorAll(".service-card");
-        testimonialCards.forEach((card) => {
-          const icon = card.querySelector(".process-icon");
-          if (icon) {
-            card.addEventListener("mouseenter", () => {
-              icon.style.transform = "scale(1.1) rotate(10deg)";
-            });
-
-            card.addEventListener("mouseleave", () => {
-              icon.style.transform = "";
-            });
-          }
-        });
-      });
-    </script>
-
-    <!-- Schema.org JSON-LD structured data for organization -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ReifenFlex",
-        "url": "https://www.ihre-domain.de",
-        "logo": "https://www.ihre-domain.de/images/tire-icon.svg",
-        "foundingDate": "2022",
-        "founders": [
-          {
-            "@type": "Person",
-            "name": "Max Müller"
-          }
-        ],
-        "description": "Mobiler Reifenwechselservice in Bruchsal und Umgebung",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Musterstraße 123",
-          "addressLocality": "Bruchsal",
-          "postalCode": "76646",
-          "addressCountry": "DE"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+4912345678901",
-          "contactType": "customer service",
-          "email": "info@reifenflex-bruchsal.de"
-        },
-        "sameAs": [
-          "https://www.facebook.com/reifenflex",
-          "https://www.instagram.com/reifenflex",
-          "https://twitter.com/reifenflex"
-        ]
-      }
     </script>
   </body>
 </html>

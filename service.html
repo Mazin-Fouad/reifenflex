@@ -834,129 +834,14 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 800, // values from 0 to 3000, with step 50ms
         once: true, // whether animation should happen only once - while scrolling down
       });
-
-      // Basic Tab functionality (can be expanded in service.js)
-      const tabButtons = document.querySelectorAll(".tab-button");
-      const tabContents = document.querySelectorAll(".tab-content");
-
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          // Deactivate all buttons and hide all content
-          tabButtons.forEach((btn) => {
-            btn.classList.remove("tab-active");
-            btn.setAttribute("aria-selected", "false");
-          });
-          tabContents.forEach((content) => {
-            content.style.display = "none";
-            content.classList.remove("active");
-          });
-
-          // Activate clicked button and show corresponding content
-          button.classList.add("tab-active");
-          button.setAttribute("aria-selected", "true");
-          const targetContentId = button.getAttribute("aria-controls");
-          const targetContent = document.getElementById(targetContentId);
-          if (targetContent) {
-            targetContent.style.display = "block"; // Or 'flex', 'grid' depending on layout
-            // For fade-in, ensure AOS or custom CSS handles it. 'active' class can be used.
-            setTimeout(() => targetContent.classList.add("active"), 50); // Small delay for transition
-          }
-        });
-      });
-
-      // Basic FAQ Accordion
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqToggles = document.querySelectorAll(".faq-toggle");
-
-        faqToggles.forEach((toggle) => {
-          toggle.addEventListener("click", () => {
-            const content = document.getElementById(
-              toggle.getAttribute("aria-controls")
-            );
-            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-
-            // Toggle aria-expanded attribute
-            toggle.setAttribute("aria-expanded", !isExpanded);
-
-            // Toggle the icon rotation
-            const icon = toggle.querySelector("i");
-            if (icon) {
-              icon.style.transform = !isExpanded
-                ? "rotate(180deg)"
-                : "rotate(0)";
-            }
-
-            // Toggle content visibility
-            if (content) {
-              if (!isExpanded) {
-                content.classList.remove("hidden");
-                content.classList.add("open");
-              } else {
-                content.classList.add("hidden");
-                content.classList.remove("open");
-              }
-            }
-          });
-        });
-      });
-    </script>
-
-    <!-- Schema.org JSON-LD structured data for service -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Mobiler Reifenwechselservice",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "ReifenFlex",
-          "image": "https://www.reifenflex.de/images/logo.png", // Beispiel-URL, bitte anpassen
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Musterstraße 123", // Ggf. anpassen, wenn nur Servicegebiet
-            "addressLocality": "Bruchsal",
-            "postalCode": "76646",
-            "addressCountry": "DE"
-          },
-          "telephone": "+491234567890" // Beispielnummer
-        },
-        "areaServed": {
-          "@type": "AdministrativeArea", // Oder City, PostalCode etc.
-          "name": "Bruchsal und Umgebung"
-        },
-        "name": "Mobiler Reifenwechsel Service",
-        "description": "Professioneller mobiler Reifenwechselservice in Bruchsal und Umgebung. Wir kommen zu Ihnen und wechseln Ihre Reifen vor Ort.",
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Standard Reifenwechsel",
-            "price": "49.00",
-            "priceCurrency": "EUR",
-            "description": "Professioneller Reifenwechsel vor Ort (PKW), inklusive Wuchten der Räder."
-          },
-          {
-            "@type": "Offer",
-            "name": "Comfort Reifenwechsel",
-            "price": "65.00",
-            "priceCurrency": "EUR",
-            "description": "Reifenwechsel mit Reifenreinigung, Profiltiefenmessung und Luftdruckkontrolle."
-          },
-          {
-            "@type": "Offer",
-            "name": "Premium Reifenwechsel",
-            "price": "89.00",
-            "priceCurrency": "EUR",
-            "description": "Komplettpaket mit Reifenpflege, Radbolzen-Reinigung und digitalem Zustandsbericht."
-          }
-        ]
-      }
     </script>
   </body>
 </html>

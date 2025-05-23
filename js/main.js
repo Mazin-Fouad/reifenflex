@@ -88,8 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
       if (window.pageYOffset > 300) {
         scrollTopBtn.classList.add("active");
+        scrollTopBtn.classList.remove("opacity-0", "invisible");
+        scrollTopBtn.classList.add("opacity-100", "visible");
       } else {
         scrollTopBtn.classList.remove("active");
+        scrollTopBtn.classList.add("opacity-0", "invisible");
+        scrollTopBtn.classList.remove("opacity-100", "visible");
       }
     });
 
