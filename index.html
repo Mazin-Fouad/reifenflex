@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#1a202c" />
     <meta
       name="description"
       content="ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung. Buche jetzt deinen Termin online!"
@@ -10,6 +12,30 @@
     <title>
       ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung
     </title>
+    <!-- Keywords -->
+    <meta name="keywords" content="Reifenwechsel, mobiler Service, Bruchsal, Reifenmontage, Werkstatt, vor Ort" />
+    <meta name="author" content="ReifenFlex" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.reifenflex.de/" />
+    <meta property="og:title" content="ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung" />
+    <meta property="og:description" content="ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung. Buche jetzt deinen Termin online!" />
+    <meta property="og:image" content="https://www.reifenflex.de/images/service.jpg" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="ReifenFlex" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.reifenflex.de/" />
+    <meta property="twitter:title" content="ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung" />
+    <meta property="twitter:description" content="ReifenFlex - Mobiler Reifenwechselservice in Bruchsal & Umgebung. Buche jetzt deinen Termin online!" />
+    <meta property="twitter:image" content="https://www.reifenflex.de/images/service.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.reifenflex.de/" />
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <!-- CSS -->
@@ -599,5 +625,63 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ReifenFlex",
+      "description": "Mobiler Reifenwechselservice in Bruchsal und Umgebung",
+      "url": "https://www.reifenflex.de",
+      "logo": "https://www.reifenflex.de/images/favicon.ico",
+      "image": "https://www.reifenflex.de/images/service.jpg",
+      "telephone": "+49-123-456789",
+      "email": "info@reifenflex.de",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bruchsal",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "49.1243",
+        "longitude": "8.5977"
+      },
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "49.1243",
+          "longitude": "8.5977"
+        },
+        "geoRadius": "50000"
+      },
+      "priceRange": "€€",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Reifenwechsel Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Standard Reifenwechsel",
+              "description": "Mobiler Reifenwechsel vor Ort"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Reifenwechsel",
+              "description": "Premium Service mit Zusatzleistungen"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </body>
 </html>
